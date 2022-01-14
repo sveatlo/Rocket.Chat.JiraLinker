@@ -1,0 +1,23 @@
+name: Release
+
+on:
+    push:
+        tags:
+            - "v*.*.*"
+
+jobs:
+    build:
+        uses: sveatlo/Rocket.Chat.JiraLinker/.github/workflows/main.yml@${{github.event.ref}}
+    release:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - uses: actions/download-artifact@v2
+              with:
+                  name: build
+            - uses: "marvinpinto/action-automatic-releases@latest"
+              with:
+                  repo_token: "${{ secrets.GITHUB_TOKEN }}"
+                  prerelease: false
+                  files: |
+                      *.zip
