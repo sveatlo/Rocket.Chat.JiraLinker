@@ -1,4 +1,4 @@
-name: Build and Publish
+name: Build
 
 on: [push, pull_request, workflow_call]
 
@@ -26,3 +26,4 @@ jobs:
               with:
                   name: build
                   path: ./dist/*.zip
+                  if-no-files-found: error
