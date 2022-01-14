@@ -1,0 +1,17 @@
+{
+    "id": "8e410c32-2369-44c8-85b6-52eb8d91a362",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.19.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Svätopluk Hanzel",
+        "homepage": "https://vunder.io",
+        "support": "https://vunder.io"
+    },
+    "name": "Jira issue linker",
+    "nameSlug": "jira-issue-linker",
+    "classFile": "JiraIssueLinkerApp.ts",
+    "description": "Auto extracts and links jira issues by issue key. Works with Jira Cloud",
+    "implements": ["IPreMessageUpdatedModify", "IPostMessageSent"]
+}
+

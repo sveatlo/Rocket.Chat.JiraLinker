@@ -1,0 +1,8 @@
+{
+    "settings_jira_domain_label": "Jira domain address",
+    "settings_jira_domain_description": "Address of your Jira Cloud instance (e.g. example.moderntv.net)",
+    "settings_jira_user_email_label": "Jira user email",
+    "settings_jira_user_email_description": "E-mail of Jira user to used for API accessing",
+    "settings_jira_user_token_label": "Access token",
+    "settings_jira_user_token_description": "Access token for the Jira user. Can be retrieved from https://id.atlassian.com/manage/api-tokens"
+}
