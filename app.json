@@ -8,10 +8,12 @@
         "homepage": "https://vunder.io",
         "support": "https://vunder.io"
     },
-    "name": "Jira issue linker",
-    "nameSlug": "jira-issue-linker",
-    "classFile": "JiraIssueLinkerApp.ts",
+    "name": "Jira linker",
+    "nameSlug": "jira-linker",
+    "classFile": "JiraLinkerApp.ts",
     "description": "Auto extracts and links jira issues by issue key. Works with Jira Cloud",
-    "implements": ["IPreMessageUpdatedModify", "IPostMessageSent"]
+    "implements": [
+        "IPreMessageUpdatedModify",
+        "IPostMessageSent"
+    ]
 }
-
