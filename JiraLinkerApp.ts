@@ -187,7 +187,9 @@ export class JiraCloudIssueLinkerApp
                 /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g,
                 ""
             ) //  ignore whole URLs
-            .match(/[A-Z0-9]+-[0-9]+/g); // match possible issue keys
+            .replace(/`[^1]*`/g, "") // ignore code in `
+            .replace(/```[^1]*```/gm, "") // ignore code in ```
+            .match(/[A-Z0-9]+-[0-9]+/gm); // match possible issue keys
 
         return matches ? matches.concat() : [];
     }
